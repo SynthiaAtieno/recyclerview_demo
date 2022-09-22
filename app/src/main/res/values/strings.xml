@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SnackBar</string>
+    <string name="contacts">Contacts</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+</resources>
