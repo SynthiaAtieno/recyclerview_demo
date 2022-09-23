@@ -68,7 +68,7 @@ public class SnackbarAdapter extends RecyclerView.Adapter<SnackbarAdapter.ViewHo
                         .setAction("Close", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Toast.makeText(context, contacts.get(position).getName()+"Closed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, contacts.get(position).getName()+" Closed", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setActionTextColor(Color.RED)
