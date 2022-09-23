@@ -3,6 +3,7 @@ package com.example.snackbar;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +64,16 @@ public class SnackbarAdapter extends RecyclerView.Adapter<SnackbarAdapter.ViewHo
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, contacts.get(position).getName()+" is Clicked", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view,contacts.get(position).getName()+" is clicked",Snackbar.LENGTH_INDEFINITE)
+                        .setAction("Close", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Toast.makeText(context, contacts.get(position).getName()+"Closed", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setActionTextColor(Color.RED)
+                        .setTextColor(Color.GREEN).show();
+               // Toast.makeText(context, contacts.get(position).getName()+" is Clicked", Toast.LENGTH_SHORT).show();
             }
         });
     }

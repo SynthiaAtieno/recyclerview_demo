@@ -31,7 +31,6 @@
             android:text="@string/contacts"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
-
             android:fontFamily="@font/black_magic"
             android:textAlignment="center"
             android:textSize="18sp" />
